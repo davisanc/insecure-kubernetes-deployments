@@ -33,7 +33,8 @@ busybox:
   command: ["sleep", "3600"]
 
 insecureApp:
-  namespace: default
+  #namespace: default
+  namespace: insecure-app
   appName: insecure-app
   replicas: 1
   image:
