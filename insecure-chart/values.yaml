@@ -29,7 +29,7 @@ insecureJava:
 busybox:
   namespace: busybox
   replicas: 1
-  image: busybox:1.35.0
+  image: busybox:1.37.0
   command: ["sleep", "3600"]
 
 insecureApp:
