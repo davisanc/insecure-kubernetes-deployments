@@ -25,7 +25,8 @@ insecureJava:
     repository: confusedcrib/insecure-java
     tag: latest
   containerPort: 8080
-  
+
+#use latest version  
 busybox:
   namespace: busybox
   replicas: 1
