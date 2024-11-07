@@ -46,7 +46,8 @@ insecureApp:
     ssh: 22
 
 workloadSecurityEvaluator:
-  namespace: default
+  #namespace: default
+  namespace: workload-security-evaluator
   appName: workload-security-evaluator
   replicas: 1
   image:
