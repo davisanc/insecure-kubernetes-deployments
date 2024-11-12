@@ -8,7 +8,7 @@ insecureJs:
     targetPort: 3000
   replicas: 1
   image:
-    repository: confusedcrib/insecure-js
+    repository: xangui/insecure-js
     tag: latest
   containerPort: 3000
 
@@ -22,7 +22,7 @@ insecureJava:
     targetPort: 8080
   replicas: 1
   image:
-    repository: confusedcrib/insecure-java
+    repository: xangui/insecure-java
     tag: latest
   containerPort: 8080
 
@@ -39,7 +39,7 @@ insecureApp:
   appName: insecure-app
   replicas: 1
   image:
-    repository: confusedcrib/insecure-app
+    repository: xangui/insecure-app
     tag: latest
   ports:
     http: 8080
@@ -51,7 +51,7 @@ workloadSecurityEvaluator:
   appName: workload-security-evaluator
   replicas: 1
   image:
-    repository: confusedcrib/workload-security-evaluator
+    repository: xangui/workload-security-evaluator
     tag: 1
   ports:
     http: 8080
