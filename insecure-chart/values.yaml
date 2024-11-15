@@ -1,5 +1,5 @@
 # Define a variable for the Google Cloud project ID
-projectId: my-gcp-project-id
+projectId: gbbsec003
 
 insecureJs:
   namespace: insecure-js
