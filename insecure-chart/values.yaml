@@ -1,3 +1,6 @@
+# Define a variable for the Google Cloud project ID
+projectId: my-gcp-project-id
+
 insecureJs:
   namespace: insecure-js
   appName: insecure-js
@@ -8,7 +11,9 @@ insecureJs:
     targetPort: 3000
   replicas: 1
   image:
-    repository: xangui/insecure-js
+    #repository: xangui/insecure-js
+    repository: gcr.io/{{ .Values.projectId }}/insecure-js
+
     tag: latest
   containerPort: 3000
 
@@ -22,7 +27,8 @@ insecureJava:
     targetPort: 8080
   replicas: 1
   image:
-    repository: xangui/insecure-java
+    #repository: xangui/insecure-java
+    repository: gcr.io/{{ .Values.projectId }}/insecure-js
     tag: latest
   containerPort: 8080
 
@@ -39,7 +45,8 @@ insecureApp:
   appName: insecure-app
   replicas: 1
   image:
-    repository: xangui/insecure-app
+    #repository: xangui/insecure-app
+    repository: gcr.io/{{ .Values.projectId }}/insecure-js
     tag: latest
   ports:
     http: 8080
@@ -51,7 +58,8 @@ workloadSecurityEvaluator:
   appName: workload-security-evaluator
   replicas: 1
   image:
-    repository: xangui/workload-security-evaluator
+    #repository: xangui/workload-security-evaluator
+    repository: gcr.io/{{ .Values.projectId }}/insecure-js
     tag: 1
   ports:
     http: 8080
