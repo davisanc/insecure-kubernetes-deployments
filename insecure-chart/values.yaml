@@ -12,7 +12,7 @@ insecureJs:
   replicas: 1
   image:
     #repository: xangui/insecure-js
-    repository: gcr.io/{{ .Values.projectId }}/insecure-js
+    repository: gcr.io/gbbsec003/insecure-js
 
     tag: latest
   containerPort: 3000
@@ -28,7 +28,7 @@ insecureJava:
   replicas: 1
   image:
     #repository: xangui/insecure-java
-    repository: gcr.io/{{ .Values.projectId }}/insecure-js
+    repository: gcr.io/gbbsec003/insecure-js
     tag: latest
   containerPort: 8080
 
@@ -46,7 +46,7 @@ insecureApp:
   replicas: 1
   image:
     #repository: xangui/insecure-app
-    repository: gcr.io/{{ .Values.projectId }}/insecure-js
+    repository: gcr.io/gbbsec003/insecure-js
     tag: latest
   ports:
     http: 8080
@@ -59,7 +59,7 @@ workloadSecurityEvaluator:
   replicas: 1
   image:
     #repository: xangui/workload-security-evaluator
-    repository: gcr.io/{{ .Values.projectId }}/insecure-js
+    repository: gcr.io/gbbsec003/insecure-js
     tag: 1
   ports:
     http: 8080
