@@ -1,6 +1,11 @@
 # Define a variable for the Google Cloud project ID
 projectId: gbbsec003
 
+#to be used for this:
+#repository: gcr.io/{{ .Values.projectId }}/insecure-js
+
+
+
 insecureJs:
   namespace: insecure-js
   appName: insecure-js
@@ -28,7 +33,7 @@ insecureJava:
   replicas: 1
   image:
     #repository: xangui/insecure-java
-    repository: gcr.io/gbbsec003/insecure-js
+    repository: gcr.io/gbbsec003/insecure-java
     tag: latest
   containerPort: 8080
 
@@ -46,7 +51,7 @@ insecureApp:
   replicas: 1
   image:
     #repository: xangui/insecure-app
-    repository: gcr.io/gbbsec003/insecure-js
+    repository: gcr.io/gbbsec003/insecure-app
     tag: latest
   ports:
     http: 8080
@@ -59,7 +64,7 @@ workloadSecurityEvaluator:
   replicas: 1
   image:
     #repository: xangui/workload-security-evaluator
-    repository: gcr.io/gbbsec003/insecure-js
+    repository: gcr.io/gbbsec003/workload-security-evaluator
     tag: 1
   ports:
     http: 8080
