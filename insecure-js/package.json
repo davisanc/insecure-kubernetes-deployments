@@ -7,7 +7,7 @@
     "chartist": "0.3.0",
     "chart.js": "2.8.0",
     "sequelize": "4.44.1",
-    "@babel/core": "7.0.0-rc.1",
+    "@babel/core": "7.25.9",
     "mysql2": "^2.3.3",
     "sqlite3": "^5.0.2"
   },
